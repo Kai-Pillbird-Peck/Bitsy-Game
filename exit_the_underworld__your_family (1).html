@@ -43,8 +43,8 @@ PAL 3
 NAME Dark Overworlk
 
 ROOM 0
-0,0,0,0,0,a,1w,a,0,0,0,1x,0,0,0,0
-0,a,a,a,a,a,0,a,a,a,a,a,a,a,a,0
+0,0,0,0,0,0,1w,0,0,0,0,1x,0,0,0,0
+0,a,a,a,a,a,n,a,a,a,a,a,a,a,a,0
 0,a,0,0,0,a,0,j,j,j,j,j,j,0,0,0
 0,a,0,0,0,a,k,0,0,0,0,2r,0,h,a,1x
 0,a,0,0,0,a,k,2t,2t,2i,0,0,0,h,a,1x
@@ -55,15 +55,15 @@ ROOM 0
 0,a,k,2k,0,0,0,0,o,0,2l,0,0,h,a,0
 0,a,k,2q,0,2s,0,2r,0,0,2l,0,0,h,a,0
 0,a,k,2p,2o,2o,2o,2o,2o,2o,2n,2t,2s,h,a,0
-0,a,k,0,0,0,0,0,0,0,2t,2t,0,h,a,0
-0,a,b,e,e,e,e,e,e,e,e,e,e,0,2j,0
-0,a,a,a,a,a,a,a,a,a,a,a,a,2j,2j,0
+0,a,k,0,0,0,0,0,0,0,2t,2t,0,0,2j,0
+0,a,b,e,e,e,e,e,e,e,e,e,e,d,a,0
+0,a,a,a,a,a,a,a,a,a,a,a,a,a,a,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 NAME Grass Room
 ITM 2 3,12
 ITM 3 3,6
 ITM 2 9,4
-ITM 2 12,0
+ITM 7 12,0
 EXT 6,1 2 0,1 FX fade_w
 EXT 13,13 3 0,1 FX fade_w
 PAL 0
@@ -1004,12 +1004,12 @@ TIL 2i
 
 TIL 2j
 00000000
-00000000
-00000000
+01100110
+00000010
 00011000
 00011000
-00000000
-00000000
+00000010
+01100110
 00000000
 
 TIL 2k
@@ -1226,7 +1226,7 @@ SPR 15
 10000101
 10000001
 11111111
-POS 0 6,0
+POS 0 6,1
 
 SPR A
 00000000
@@ -1667,7 +1667,7 @@ NAME Sign dialog
 DLG 5
 """
 {ava "q"}{blip "1"}Animate thou dead body.{pg}{ava "c"}{pg}{ava "d"}{pg}{ava "e"}{pg}{ava "f"}{pg}{ava "g"}{pg}Today is hat day.
-grab 1 hat and head through the back door!
+Don't forget to grab a hat.
 """
 NAME Intro dialog
 
@@ -1701,7 +1701,7 @@ DLG c
   - {item "2"} <= 3 ?
     You listen to the conversation below....{pg}"Oh no! I forgot the hats outside!"{pg}"Really?"{pg}"Yes, really! All of the hats are missing!"{pg}"All four?"{pg}"Yep, they have to be outside...But they've locked the doors for hat day."{pg}"I wish we could get outside..."{pg}Number of hats: {say {item "2"}}
   - else ?
-    (You drop 3 hats onto the foyer.){pg}[3 hats have left your inventory]                      [You have 1 hat left]{pg}"Hey are these the hats?"{pg}"How did they get here?"{pg}"I'm not sure, but we're saved!"{pg}"Hey.. there is a hat missing".{pg}...{pg}{ava "14"}You put on your hat for hat day :){pg}"That's a shame... we always put a hat on grandpa's grave."{pg}"Yeah, it's his day after all!"{pg}"Maybe he has the missing one!"{pg}{end}"Ha ha, as if."
+    (You drop 3 hats onto the foyer.){pg}[3 hats have left your inventory]      [You have 1 hat left]{pg}"Hey are these the hats?"{pg}"How did they get here?"{pg}"I'm not sure, but we're saved!"{pg}"Hey.. there is a hat missing".{pg}...{pg}{ava "14"}You put on your hat for hat day :){pg}"That's a shame... we always put a hat on grandpa's grave."{pg}"Yeah, it's his day after all!"{pg}"Maybe he has the missing one!"{pg}{end}"Ha ha, as if."
 }
 """
 NAME sprite 11 dialog
